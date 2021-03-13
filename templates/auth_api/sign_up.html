@@ -1,0 +1,54 @@
+{% extends "index.html" %}
+
+{% block title %}
+    <title>{{ title }}</title>
+{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/static/CSS/auth.css">
+{% endblock %}
+
+{% block content %}
+
+    <div class="background-container">
+        <div class="signup_container">
+        <div class="signup_left">
+            <img class="img-sign_up" src="/static/assets/auth/data.jpeg">
+        </div>
+
+        <div class="signup_right">
+            <form id="sign_up_form" class="form-content">
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input class="form-control" type="text" name="email" id="email" placeholder="example@email.com"
+                           required/>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input class="form-control" type="password" name="password" id="password"
+                           placeholder="********" required/>
+                </div>
+
+                <div class="form-group">
+                    <label for="passwordRepeat">Repeat Password</label>
+                    <input class="form-control" type="password" name="passwordRepeat" id="passwordRepeat"
+                           placeholder="********" required/>
+                </div>
+
+                <div class="form-group form-btn-group">
+                    <input class="form-btn" type="submit" value="Sign Up" />
+                    <input class="form-btn" type="button" value="Sign Up with Google" />
+                </div>
+            </form>
+        </div>
+
+    </div>
+    </div>
+
+{% endblock %}
+
+{% block scripts %}
+    <script src="/static/js/auth.js"></script>
+{% endblock %}

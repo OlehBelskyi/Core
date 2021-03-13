@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block index %}
+
+    {% if not header_hide %}
+        <div class="header-container">
+            {% include "header.html" %}
+        </div>
+    {% endif %}
+
+    {% if not left_sidebar_hide %}
+        <div class="left_sidebar-container">
+            {% include "left_sidebar.html" %}
+        </div>
+    {% endif %}
+
+    <div class="page-container {% if header_hide %} h100{% endif %}">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+{% endblock %}
